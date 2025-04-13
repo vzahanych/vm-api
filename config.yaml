@@ -1,0 +1,17 @@
+server:
+  address: "0.0.0.0:8080"
+  read_timeout: 10s
+  write_timeout: 10s
+  graceful_shutdown_delay: 5s
+
+opentelemetry:
+  enabled: true
+  endpoint: "http://localhost:14250"
+  service_name: "vm-api-service"
+
+healthcheck:
+  enabled: true
+  url: "/healthz"
+
+logging:
+  log_level: "info"
